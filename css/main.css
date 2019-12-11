@@ -28,7 +28,7 @@ a{
     text-decoration: none;
     color:#1B1C21;
 }
-a:visited{
+.header-menu a:visited, .content a:visited{
     color:#1B1C21;
 }
 .header-menu{
