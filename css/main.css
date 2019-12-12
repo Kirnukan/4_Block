@@ -128,7 +128,7 @@
     background-color:#FFFFFF ;
 }
 main{
-    margin-top: 10px;
+    margin-top: 25px;
     display: flex;
     flex-direction: row;  
 }
