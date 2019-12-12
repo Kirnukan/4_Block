@@ -1,10 +1,12 @@
 @font-face{
     font-family: "TTLakes";
     src: url(TTLakes-Medium.ttf);
+    font-weight: normal;
+    font-style: normal;
 }
 
 .full-page{
-    font-family: "TTLakes";
+    font-family: "TTLakes", sans-serif;
     background-color: #F8F8F8;
     display: flex;
     width: 60%;
@@ -17,18 +19,21 @@
     display: flex;
     flex-direction: row;
 }
-.first-heading{ 
-    border-left: 3px solid #41F6D7;
-    padding-left: 20px;
+.first-heading{    
     flex-grow: 3;
     font-size: 28px;
     font-weight: bold;
 }
-a{
+.first-heading::before{
+    content: "";
+    border-left: 3px solid #41F6D7;
+    padding-right: 20px;
+}
+.nav-element, .header-element{
     text-decoration: none;
     color:#1B1C21;
 }
-.header-menu a:visited, .content a:visited{
+.header-element:visited{
     color:#1B1C21;
 }
 .header-menu{
@@ -40,12 +45,12 @@ a{
     flex-grow: 1;
 }
 
-.left-request{
+.btn-request{
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-.left-request::after{
+.btn-request::after{
     margin-left: 8px;
     margin-right: -28px;
     display: flex;
@@ -58,12 +63,12 @@ a{
     background-color: #FF3E79;
     border-radius: 50%;  
 }
-.repair-status{
+.btn-repair{
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-.repair-status::after{
+.btn-repair::after{
     margin-left: 8px;
     margin-right: -15px;
     display: flex;
@@ -76,43 +81,48 @@ a{
     background-color: #FF3E79;
     border-radius: 50%;  
 }
-.header-menu div{
+.header-btn{
     margin-right: 35px;
     margin-left: 35px;
 
 }
-.menu{
+.menu-list{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
     display: flex;
     height: 55px;
+    flex-direction: row;
+    height: 65px;
 }
-.menu div{
+.list-element{
     padding: 0 10.5px 0 0;
+    
 }
 .menu {
-    justify-content: flex-start;
-    
+    justify-content: flex-start;   
     letter-spacing: -0.2px;
     height: 5px;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-end;
     margin-top: 80px;
-    margin-left: 15px;
+    margin-left: -15px;
 }
-.menu a{ 
+.nav-element{ 
     color: #7E7E82;
     font-style: medium;
     line-height: 50px;
-    margin: 0 -15px 15px 5px; 
-    flex-grow: 1;
+    margin: 0 -5px 15px -5px; 
     flex-basis: 0;
     border: 2px solid #F8F8F8;
     padding:  10px 20px ;
     border-radius: 6px;
     padding-left: 20px;
     padding-right: 20px;
+    white-space: nowrap
 }
-.menu a:hover{
+.nav-element:hover{
     border: 2px solid #B8FFEC ;
     background-color:#FFFFFF ;
 }
@@ -122,24 +132,34 @@ main{
     flex-direction: row;  
 }
 .content{
+    display: flex;
     margin-left: 20px;
     margin-top: -10px;
-    
+    flex-direction: column;
+    width:450%;
 }
-.content .read-next{
+.read-next{
     margin-left: 5px;
 }
-.content .read-next::before{
+.read-next::before{
     content: url(next.svg);
     margin-right: 16px;
 }
-.cps img{
-    align-self: flex-start;
-    align-items: flex-start;
-    width:  531.35px;
+.btn-read-next{
+    font-size: 16px;
+    font-family: "TTLakes";
+    border: none;
+    outline: none;
+    background-color: #F8F8F8;
+}
+.btn-read-next:hover{
+    cursor: pointer;
+}
+.cps-img{
+    width: 90%;
     height: 300px;
     margin-right: 20px;
     margin-left: 36px;
-    margin-bottom: 28px;
+    margin-bottom: 15px;
     border-top-left-radius:  5px; 
 }
