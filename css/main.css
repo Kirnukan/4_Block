@@ -2,15 +2,16 @@
     font-family: "TTLakes";
     src: url(TTLakes-Medium.ttf);
 }
+
 .full-page{
     font-family: "TTLakes";
     background-color: #F8F8F8;
     display: flex;
-    width: 1120px;
-    height: 512px;
+    width: 60%;
+    height: 500%;
     flex-direction: column;
-
     font-size: 16px;
+    margin: auto;
 }
 .site-header{
     margin-top: 20px;
@@ -32,7 +33,7 @@ a{
     color:#1B1C21;
 }
 .header-menu{
-    margin-right: -5px;
+    margin-right: 15px;
     justify-content: flex-end;
     align-self: center;
     display: flex;
@@ -134,14 +135,12 @@ main{
     margin-right: 16px;
 }
 .cps img{
-    margin: 0;
     align-self: flex-start;
     align-items: flex-start;
     width:  531.35px;
     height: 300px;
-    padding-right: 20px;
-    padding-left: 36px;
-    padding-bottom: 28px;
-    border-top-left-radius:  9%;
-    
+    margin-right: 20px;
+    margin-left: 36px;
+    margin-bottom: 28px;
+    border-top-left-radius:  5px; 
 }
